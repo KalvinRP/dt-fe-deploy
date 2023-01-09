@@ -78,12 +78,12 @@ function NavbarUnlog(props) {
       setShowLog(false)
       const logging = await API.post('/login', login)
 
-      if (logging?.statusText === "OK") {
-        props.dispatch({
-          type: 'LOGIN_SUCCESS',
-          payload: logging.data.data,
-        })
-      };
+      // if (logging?.statusText === "OK") {
+      //   props.dispatch({
+      //     type: 'LOGIN_SUCCESS',
+      //     payload: logging.data.data,
+      //   })
+      // };
       redirect('/')
     } catch (error) {
         alert("Password or email dont match!")
